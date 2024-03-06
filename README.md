@@ -10,7 +10,7 @@ The repo is divided in 3 folders:
 
 # The nextjs-ui
 
-First, we setup a basic NextJS app. This app needs to maintain a list of libraries it has access to. See (packages/nextjs-ui/app/components.tsx)[packages/nextjs-ui/app/components.tsx] for the list of libraries.
+First, we setup a basic NextJS app. This app needs to maintain a list of libraries it has access to. See [packages/nextjs-ui/app/components.tsx](packages/nextjs-ui/app/components.tsx) for the list of libraries.
 
 ```tsx
 // this allows addressing libraries with
@@ -21,7 +21,7 @@ const components = {
 };
 ```
 
-Then, when rendering a component, we can use the `components` object to render the component from the component. For example see (packages/nextjs-ui/app/pages/page.tsx)[packages/nextjs-ui/app/pages/page.tsx].
+Then, when rendering a component, we can use the `components` object to render the component from the component. For example see [packages/nextjs-ui/app/pages/page.tsx](packages/nextjs-ui/app/pages/page.tsx).
 
 ```tsx
   const Page = components['basic']['Page'];
@@ -31,7 +31,7 @@ Then, when rendering a component, we can use the `components` object to render t
 
 # The libraries
 
-In order to work with React.lazy, the library must export components as default, in directly addressable folders. For example see (packages/basic-components/src/components/page.jsx)[packages/basic-components/src/components/page.jsx].
+In order to work with React.lazy, the library must export components as default, in directly addressable folders. For example see [packages/basic-components/src/components/page.jsx](packages/basic-components/src/components/page.jsx).
 
 ```tsx
 const React = require('react');
@@ -48,7 +48,7 @@ const Page = ({title}) => {
 export default Page;
 ```
 
-This component is then referenced in the main library file (ex. (packages/basic-components/src/index.js)[packages/basic-components/src/index.js]). In order to be able to import the component from the library. This is where React.lazy is used to delay the import to the last moment. (React.Lazy is the same as Next.dynamic, but specific for React).
+This component is then referenced in the main library file (ex. [packages/basic-components/src/index.js](packages/basic-components/src/index.js)). In order to be able to import the component from the library. This is where React.lazy is used to delay the import to the last moment. (React.Lazy is the same as Next.dynamic, but specific for React).
 
 ```tsx
 const components = {
